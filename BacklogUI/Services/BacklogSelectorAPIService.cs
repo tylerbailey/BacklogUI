@@ -15,7 +15,11 @@ namespace BacklogUI.Services
             _httpClientFactory = httpClientFactory;
         }
 
-
+        /// <summary>
+        /// Makes a call into the Baglog Selector API and returns a game for the given user
+        /// </summary>
+        /// <param name="vanityUrl">Steam profile vanity URL for a user</param>
+        /// <returns>JSON representation of a Steam library game</returns>
         public async Task<string> GetSelectedGame(string vanityUrl)
         {
             string result;
